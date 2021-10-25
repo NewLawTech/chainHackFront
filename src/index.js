@@ -17,11 +17,11 @@ const serverUrl = 'https://u947opv0ik8y.usemoralis.com:2053/server';
 ReactDOM.render(
   <React.StrictMode>
     <MoralisProvider appId= {appId} serverUrl={serverUrl}>
-    <ChakraProvider theme={theme}> 
-        <App />
-      </ChakraProvider>
-    </MoralisProvider>
-  </React.StrictMode>,
+      <ChakraProvider theme={theme}> 
+          <App />
+        </ChakraProvider>
+      </MoralisProvider>
+    </React.StrictMode>,
   document.getElementById('root')
 );
 
