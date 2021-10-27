@@ -4,94 +4,36 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Redirect,
 } from "react-router-dom";
 import "./App.css";
 import { useMoralis } from "react-moralis";
 import { Button, Box, Heading } from "@chakra-ui/react";
 import { Container, Center } from "@chakra-ui/react";
+import { Home } from './Home';
+import { Draft } from './Draft';
 import { Auth } from './Auth';
 import { Nav } from './Header';
 
 function App() {
-  const { isAuthenticated } = useMoralis();
+  const { isAuthenticated, isAuthUndefined, user } = useMoralis();
+  
+  const LogoutButton = () => {
+    const { logout, isAuthenticating } = useMoralis();
+    return (
+    <Button
+      display={"block"}
+      colorScheme="blue"
+      variant="solid"
+      isLoading={isAuthenticating}
+      onClick={() => logout()}
+      disabled={isAuthenticating}>
+      Logout
+    </Button> 
+    );
+  }
 
-  if (isAuthenticated) {
-
-    const LogoutButton = () => {
-      const { logout, isAuthenticating } = useMoralis();
-    
-      return (
-        
-        <><Button
-          display={"block"}
-          colorScheme="red"
-          variant="solid"
-          isLoading={isAuthenticating}
-          onClick={() => logout()}
-          disabled={isAuthenticating}>
-          Logout
-        </Button>
-        <Router>
-        <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/dashboard">
-              <Dashboard />
-            </Route>
-          </Switch>
-          </Router></>   
-      );
-    };
-
-// You can think of these components as "pages"
-// in your app.
-
-function Home() {
-  return (
-    <div>
-      <h2>Home</h2>
-    </div>
-  );
-}
-
-function About() {
-  return (
-    <div>
-      <h2>About</h2>
-    </div>
-  );
-}
-
-function Dashboard() {
-  return (
-    <div>
-      <h2>Dashboard</h2>
-    </div>
-  );
-}
-
-  return (
-     <Box display={"block"} p={35} className="App">
-      <Nav />
-      <LogoutButton />
-      <Center>
-        <img width={500} height={500} src={logo} alt="logo" />
-      </Center>
-
-      <Center>
-        <Heading as="h2" size="3xl" p={10}>
-          Welcome to Chainlink!
-        </Heading>
-      </Center>
-    </Box>
-      );
-    }
-
+  if (!isAuthenticated) {
     return (
       <Container>
       <div display={"block"} p={35} className="App">
@@ -107,5 +49,38 @@ function Dashboard() {
       </Container>
       );
     }
-    
+
+  return (
+  <Router> 
+     <Box display={"block"} p={35} className="App">
+      <Nav />     
+      <Center>
+        <Heading as="h2" size="3xl" p={10}>
+          Welcome to Chainlink!
+        </Heading>
+      </Center>
+      <Switch>
+      <Route path="/" exact>
+        <Home />
+      </Route>
+      <Route path="/draft" exact>
+        <Draft />
+      </Route>
+    </Switch>
+    <br/> 
+    <LogoutButton />
+    </Box>
+
+ 
+    </Router>
+  );
+}
+  
 export default App;
+
+    
+      
+ 
+
+
+   

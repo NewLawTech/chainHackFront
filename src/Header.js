@@ -17,6 +17,8 @@ import {
   Center,
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
+import { useMoralis } from "react-moralis";
+import logo from "./newlawlogo.png";
 
 const NavLink = ({ children }) => (
   <Link
@@ -35,17 +37,18 @@ const NavLink = ({ children }) => (
 export const Nav = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { logout } = useMoralis();
   return (
     <>
       <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-          <Box>Logo</Box>
+          <Box><img width={70} height={70} src={logo} alt="logo" /></Box>
 
           <Flex alignItems={'center'}>
             <Stack direction={'row'} spacing={7}>
               <Button onClick={toggleColorMode}>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-              </Button>
+              </Button>          
 
               <Menu>
                 <MenuButton
@@ -75,7 +78,7 @@ export const Nav = () => {
                   <MenuDivider />
                   <MenuItem>Your Servers</MenuItem>
                   <MenuItem>Account Settings</MenuItem>
-                  <MenuItem>Logout</MenuItem>
+                  <MenuItem onClick={() => logout()}>Logout</MenuItem>
                 </MenuList>
               </Menu>
             </Stack>
