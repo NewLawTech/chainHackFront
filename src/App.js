@@ -11,7 +11,7 @@ import { useMoralis } from "react-moralis";
 import { Button, Box, Heading } from "@chakra-ui/react";
 import { Container, Center } from "@chakra-ui/react";
 import { Home } from './Home';
-import { Draft } from './Draft';
+import { NltEditor } from './NltEditor';
 import { Auth } from './Auth';
 import { Nav } from './Header';
 
@@ -60,11 +60,11 @@ function App() {
         </Heading>
       </Center>
       <Switch>
-      <Route path="/" exact>
+      <Route path="/draft" exact>
         <Home />
       </Route>
-      <Route path="/draft" exact>
-        <Draft />
+      <Route path="/" exact>
+        <NltEditor />
       </Route>
     </Switch>
     <br/> 

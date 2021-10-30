@@ -76,8 +76,8 @@ export const Nav = () => {
                   </Center>
                   <br />
                   <MenuDivider />
-                  <MenuItem>Your Servers</MenuItem>
-                  <MenuItem>Account Settings</MenuItem>
+                  <MenuItem>Reputation</MenuItem>
+                  <MenuItem>Agreements</MenuItem>
                   <MenuItem onClick={() => logout()}>Logout</MenuItem>
                 </MenuList>
               </Menu>
