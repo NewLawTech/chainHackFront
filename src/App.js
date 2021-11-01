@@ -14,6 +14,7 @@ import { Home } from './Home';
 import { NltEditor } from './NltEditor';
 import { Auth } from './Auth';
 import { Nav } from './Header';
+import { MintDeed } from './components/MintDeed';
 
 function App() {
   const { isAuthenticated, isAuthUndefined, user } = useMoralis();
@@ -65,6 +66,9 @@ function App() {
       </Route>
       <Route path="/" exact>
         <NltEditor />
+      </Route>
+      <Route path="/mint" exact>
+        <MintDeed />
       </Route>
     </Switch>
     <br/> 

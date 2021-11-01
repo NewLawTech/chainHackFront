@@ -32,7 +32,7 @@ export const NltEditor = () => {
     className="NltEditor"
       //</Box>style={{ border: "1px solid black", minHeight: "16em", cursor: "text" }}
       >
-            <header className="NltEditor-header">
+      <header className="Nlt-header">
         NewLawTech Editor
       </header>
       <Editor
@@ -42,7 +42,7 @@ export const NltEditor = () => {
         editorClassName="editor-class"
         toolbarClassName="toolbar-class"
       />
-      <header className="NltEditor-header">
+      <header className="Nlt-header">
         NewLawTech Contract
       </header>
       <div className="preview" dangerouslySetInnerHTML={createMarkup(convertedContent)}></div>

@@ -1,0 +1,1 @@
+export { useMintDeeds } from './useMintDeeds'
