@@ -76,7 +76,7 @@ export const Nav = () => {
                   </Center>
                   <br />
                   <MenuDivider />
-                  <MenuItem>Reputation</MenuItem>
+                  <MenuItem>Plugins</MenuItem>
                   <MenuItem>Agreements</MenuItem>
                   <MenuItem onClick={() => logout()}>Logout</MenuItem>
                 </MenuList>

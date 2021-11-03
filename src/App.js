@@ -66,6 +66,7 @@ function App() {
       </Route>
       <Route path="/" exact>
         <NltEditor />
+        <MintDeed />
       </Route>
       <Route path="/mint" exact>
         <MintDeed />

@@ -9,10 +9,6 @@ export const MintDeed = () => {
     console.log(amountOfDeeds)
   }
 
-  
-  const handleMintSubmit = () => {
-    return mintDeeds(amountOfDeeds)
-  }
 
 
   return (
@@ -24,8 +20,7 @@ export const MintDeed = () => {
         placeholder="Number of deeds"
         onChange={handleInputChange}>
       </Input>
-      <Button
-        onClick={handleMintSubmit}>
+      <Button>
         Mint Deeds
       </Button>
     </div>
