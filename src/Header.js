@@ -18,7 +18,7 @@ import {
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { useMoralis } from "react-moralis";
-import logo from "./newlawlogo.png";
+import logo from "./images/newlawlogo.png";
 
 const NavLink = ({ children }) => (
   <Link

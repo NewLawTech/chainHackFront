@@ -1,4 +1,4 @@
-import logo from "./newlawlogo.png";
+import logo from './images/newlawlogo.png';
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -15,6 +15,7 @@ import { NltEditor } from './NltEditor';
 import { Auth } from './Auth';
 import { Nav } from './Header';
 import { MintDeed } from './components/MintDeed';
+import { PdfDeed } from "./components/PdfDeed";
 
 function App() {
   const { isAuthenticated, isAuthUndefined, user } = useMoralis();
