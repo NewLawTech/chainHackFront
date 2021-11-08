@@ -26,9 +26,6 @@ export const MintDeed = () => {
           >
         <PdfDeed />
       </PDFViewer>
-      <PDFDownloadLink document={PdfDeed}>
-        
-      </PDFDownloadLink>
       </Center>
       <br/>
       <Input 

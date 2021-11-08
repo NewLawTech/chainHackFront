@@ -4,18 +4,18 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect,
+  Link
 } from "react-router-dom";
 import "./App.css";
 import { useMoralis } from "react-moralis";
 import { Button, Box, Heading } from "@chakra-ui/react";
 import { Container, Center } from "@chakra-ui/react";
+import { User } from './User';
 import { Home } from './Home';
-import { NltEditor } from './NltEditor';
-import { Auth } from './Auth';
-import { Nav } from './Header';
+import { NltEditor } from './components/NltEditor';
+import { Auth } from './components/Auth';
+import { Nav } from './components/Header';
 import { MintDeed } from './components/MintDeed';
-import { PdfDeed } from "./components/PdfDeed";
 
 function App() {
   const { isAuthenticated, isAuthUndefined, user } = useMoralis();
@@ -62,9 +62,10 @@ function App() {
         </Heading>
       </Center>
       <Switch>
-      <Route path="/draft" exact>
+      <Route path="/home" exact>
         <Home />
       </Route>
+      <Route path="/user/:id" component = { User } />
       <Route path="/" exact>
         <NltEditor />
         <MintDeed />
