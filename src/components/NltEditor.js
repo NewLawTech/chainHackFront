@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import { EditorState } from "draft-js";
 import { Editor } from 'react-draft-wysiwyg';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
-import { Box } from '@chakra-ui/react';
+import { Box, Button } from '@chakra-ui/react';
 import { convertToHTML } from 'draft-convert';
 import DOMPurify from 'dompurify';
+import { ContractCard } from './ContractCard';
 
 export const NltEditor = () => {
   const [editorState, setEditorState] = useState(() =>
@@ -47,6 +49,10 @@ export const NltEditor = () => {
       </header>
       <div className="preview" dangerouslySetInnerHTML={createMarkup(convertedContent)}></div>
     </div>
+    <Button>
+      <Link to="/mint">Sign & Mint</Link>   
+    </Button>
+    <ContractCard />
   </Box>
   );
 }

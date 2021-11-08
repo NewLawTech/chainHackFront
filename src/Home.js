@@ -1,6 +1,7 @@
 import React, { useState, useEffect }  from 'react';
 import { Link } from 'react-router-dom';
 import { Box, Center } from '@chakra-ui/react'; 
+import { FetchData } from './FetchDataTest';
 
 export const Home = () => {
   const [error, setError] = useState(null);
@@ -27,6 +28,9 @@ if (error) {
   } else {
       return (
           <Box>
+            <header className="Nlt-header">
+        UsersApiTest
+        </header>
           <Center> 
           <ul>
               {users.map(user => (
@@ -35,8 +39,17 @@ if (error) {
               </li>
               ))}
             </ul>
-          </Center> 
+          </Center>
+          <br/>
+        <header className="Nlt-header">
+        FetchDataTest
+        </header>
+        <Center>
+        <FetchData />
+        </Center>
         </Box>
       );
   }
+
+
 }

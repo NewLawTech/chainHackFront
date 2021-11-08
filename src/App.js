@@ -62,20 +62,19 @@ function App() {
         </Heading>
       </Center>
       <Switch>
-      <Route path="/home" exact>
-        <Home />
-      </Route>
-      <Route path="/user/:id" component = { User } />
       <Route path="/" exact>
         <NltEditor />
-        <MintDeed />
+      </Route>
+      <Route path="/home" exact>
+        <Home />
       </Route>
       <Route path="/mint" exact>
         <MintDeed />
       </Route>
+      <Route path="/user/:id" component = { User } />
     </Switch>
     <br/> 
-    <LogoutButton />
+    {/* <LogoutButton /> */}
     </Box>
 
  

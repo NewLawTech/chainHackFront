@@ -1,5 +1,6 @@
-import { Input, Button, Center } from '@chakra-ui/react'; 
 import { useState } from 'react';
+import { Link } from "react-router-dom";
+import { Input, Button, Center, Stack } from '@chakra-ui/react'; 
 import { PdfDeed } from './PdfDeed';
 import { PDFViewer, PDFDownloadLink } from '@react-pdf/renderer';
 
@@ -10,8 +11,6 @@ export const MintDeed = () => {
     setAmountOfDeeds(newAmount)
     console.log(amountOfDeeds)
   }
-
-
 
   return (
     <div>
@@ -35,9 +34,16 @@ export const MintDeed = () => {
       </Input>
       <br/>
       <br/>
-      <Button>
-        Mint Deeds
-      </Button>
+      <Center>
+        <Stack spacing={4} direction="row" align="center">
+          <Button>
+            <Link to="/">Editor</Link>   
+          </Button>
+          <Button>
+            Mint Deeds
+          </Button>
+        </Stack>
+      </Center>
     </div>
   )
 }
