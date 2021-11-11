@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from "react-router-dom";
-import { Input, Button, Center, Stack } from '@chakra-ui/react'; 
+import { Input, Button, Center, Stack, Heading, useColorModeValue } from '@chakra-ui/react'; 
 import { PdfDeed } from './PdfDeed';
 import { PDFViewer, PDFDownloadLink } from '@react-pdf/renderer';
 
@@ -14,9 +14,11 @@ export const MintDeed = () => {
 
   return (
     <div>
-      <header className="Nlt-header">
+       <Heading className="Nlt-header"
+      as="h3" size="lg"
+      bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
         NewLawTech MintDeed
-      </header>
+      </Heading>
       <Center>
       <PDFViewer
           width="850" 

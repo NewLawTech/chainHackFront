@@ -2,6 +2,7 @@ import React, { useState, useEffect }  from 'react';
 import { Link } from 'react-router-dom';
 import { Box, Center } from '@chakra-ui/react'; 
 import { FetchData } from './FetchDataTest';
+// import { Web3StoreFile } from './components/Web3StoreFile';
 
 export const Home = () => {
   const [error, setError] = useState(null);
@@ -47,9 +48,10 @@ if (error) {
         <Center>
         <FetchData />
         </Center>
+        <header className="Nlt-header">
+        Web3.storage
+        </header>
         </Box>
       );
   }
-
-
 }

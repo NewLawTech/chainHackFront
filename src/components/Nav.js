@@ -1,9 +1,15 @@
 import { ReactNode } from 'react';
 import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import {
   Box,
   Flex,
   Avatar,
-  Link,
+  // Link,
   Button,
   Menu,
   MenuButton,
@@ -19,6 +25,7 @@ import {
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { useMoralis } from "react-moralis";
 import logo from "../images/newlawlogo.png";
+import coups from '../images/coups.jpg'
 
 const NavLink = ({ children }) => (
   <Link
@@ -58,8 +65,8 @@ export const Nav = () => {
                   cursor={'pointer'}
                   minW={0}>
                   <Avatar
-                    size={'sm'}
-                    src={'https://avatars.dicebear.com/api/male/username.svg'}
+                    size={'md'}
+                    src={coups }
                   />
                 </MenuButton>
                 <MenuList alignItems={'center'}>
@@ -67,17 +74,17 @@ export const Nav = () => {
                   <Center>
                     <Avatar
                       size={'2xl'}
-                      src={'https://avatars.dicebear.com/api/male/username.svg'}
+                      src={ coups }
                     />
                   </Center>
                   <br />
                   <Center>
-                    <p>Username</p>
+                    <p>Coups</p>
                   </Center>
                   <br />
                   <MenuDivider />
                   <MenuItem>Plugins</MenuItem>
-                  <MenuItem>Agreements</MenuItem>
+                  <MenuItem as={Link} to='/library'>Agreements</MenuItem>
                   <MenuItem onClick={() => logout()}>Logout</MenuItem>
                 </MenuList>
               </Menu>

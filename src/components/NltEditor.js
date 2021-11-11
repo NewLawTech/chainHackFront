@@ -3,10 +3,9 @@ import { Link } from "react-router-dom";
 import { EditorState } from "draft-js";
 import { Editor } from 'react-draft-wysiwyg';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
-import { Box, Button } from '@chakra-ui/react';
+import { Box, Button, Heading, useColorModeValue } from '@chakra-ui/react';
 import { convertToHTML } from 'draft-convert';
 import DOMPurify from 'dompurify';
-import { ContractCard } from './ContractCard';
 
 export const NltEditor = () => {
   const [editorState, setEditorState] = useState(() =>
@@ -34,9 +33,11 @@ export const NltEditor = () => {
     className="NltEditor"
       //</Box>style={{ border: "1px solid black", minHeight: "16em", cursor: "text" }}
       >
-      <header className="Nlt-header">
+      <Heading className="Nlt-header"
+      as="h3" size="lg"
+      bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
         NewLawTech Editor
-      </header>
+      </Heading>
       <Editor
         defaultEditorState={editorState}
         onEditorStateChange={handleEditorChange}
@@ -44,15 +45,16 @@ export const NltEditor = () => {
         editorClassName="editor-class"
         toolbarClassName="toolbar-class"
       />
-      <header className="Nlt-header">
+      <Heading className="Nlt-header"
+      as="h3" size="lg"
+      bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
         NewLawTech Contract
-      </header>
+      </Heading>
       <div className="preview" dangerouslySetInnerHTML={createMarkup(convertedContent)}></div>
     </div>
     <Button>
       <Link to="/mint">Sign & Mint</Link>   
     </Button>
-    <ContractCard />
   </Box>
   );
 }

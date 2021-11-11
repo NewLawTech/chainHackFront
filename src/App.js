@@ -14,8 +14,9 @@ import { User } from './User';
 import { Home } from './Home';
 import { NltEditor } from './components/NltEditor';
 import { Auth } from './components/Auth';
-import { Nav } from './components/Header';
+import { Nav } from './components/Nav';
 import { MintDeed } from './components/MintDeed';
+import { AgreementLibrary } from './screens/AgreementLibrary';
 
 function App() {
   const { isAuthenticated, isAuthUndefined, user } = useMoralis();
@@ -70,6 +71,9 @@ function App() {
       </Route>
       <Route path="/mint" exact>
         <MintDeed />
+      </Route>
+      <Route path="/library" exact>
+        <AgreementLibrary />
       </Route>
       <Route path="/user/:id" component = { User } />
     </Switch>

@@ -1,13 +1,15 @@
-// import Image from 'next/image';
 import {
   Box,
   Center,
   Heading,
+  Image,
   Text,
   Stack,
   Avatar,
   useColorModeValue,
 } from '@chakra-ui/react';
+import car from '../images/skoda.png';
+import coups from '../images/coups2.jpg'
 
 export const ContractCard = () => {
   return (
@@ -21,18 +23,16 @@ export const ContractCard = () => {
         p={6}
         overflow={'hidden'}>
         <Box
-          h={'210px'}
+          h={'248px'}
           bg={'gray.100'}
           mt={-6}
           mx={-6}
           mb={6}
           pos={'relative'}>
-          {/* <Image
-            src={
-              'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
-            }
+          <Image
+            src={car}
             layout={'fill'}
-          /> */}
+          />
         </Box>
         <Stack>
           <Text
@@ -41,13 +41,13 @@ export const ContractCard = () => {
             fontWeight={800}
             fontSize={'sm'}
             letterSpacing={1.1}>
-            Blog
+            Car Sales Agreement
           </Text>
           <Heading
             color={useColorModeValue('gray.700', 'white')}
             fontSize={'2xl'}
             fontFamily={'body'}>
-            Boost your conversion rate
+            Legal Perfection
           </Heading>
           <Text color={'gray.500'}>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
@@ -57,13 +57,15 @@ export const ContractCard = () => {
           </Text>
         </Stack>
         <Stack mt={6} direction={'row'} spacing={4} align={'center'}>
-          <Avatar
-            src={'https://avatars0.githubusercontent.com/u/1164541?v=4'}
+          <Avatar 
+            size="lg" 
+            name="Ale Couperus"
+            src={ coups }
             alt={'Author'}
           />
           <Stack direction={'column'} spacing={0} fontSize={'sm'}>
-            <Text fontWeight={600}>Achim Rolle</Text>
-            <Text color={'gray.500'}>Feb 08, 2021 · 6min read</Text>
+            <Text fontWeight={600}>Ale Couperus</Text>
+            <Text color={'gray.500'}>November 8, 2021 · 2 min read</Text>
           </Stack>
         </Stack>
       </Box>
