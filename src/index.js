@@ -12,8 +12,8 @@ const theme = extendTheme({
   }
 })
 
-const appId = 'PErZ0rEkdPheXUD1RoKWyJnKaeQDBqGPINzXvvDZ';
-const serverUrl = 'https://u947opv0ik8y.usemoralis.com:2053/server';
+const appId = 'mV0ulkWu8yMyYdRdU28jlUZyBnjK592n2x0tj5WL';
+const serverUrl = 'https://s5fow7as13al.usemoralis.com:2053/server';
 
 ReactDOM.render(
   <React.StrictMode>

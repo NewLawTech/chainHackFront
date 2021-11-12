@@ -13,14 +13,20 @@ import { Container, Center } from "@chakra-ui/react";
 import { User } from './User';
 import { Home } from './Home';
 import { NltEditor } from './components/NltEditor';
+import { NltOpenSea } from './components/NltOpenSea';
 import { Auth } from './components/Auth';
 import { Nav } from './components/Nav';
 import { MintDeed } from './components/MintDeed';
 import { AgreementLibrary } from './screens/AgreementLibrary';
 
 function App() {
-  const { isAuthenticated, isAuthUndefined, user } = useMoralis();
-  
+  const { 
+    Moralis, 
+    isAuthenticated, 
+    isAuthUndefined, 
+    user, 
+    } = useMoralis();
+    
   const LogoutButton = () => {
     const { logout, isAuthenticating } = useMoralis();
     return (
@@ -56,7 +62,7 @@ function App() {
   return (
   <Router> 
      <Box display={"block"} p={35} className="App">
-      <Nav />     
+      <Nav />   
       <Center>
         <Heading as="h2" size="3xl" p={10}>
           Welcome to Chainlink!
@@ -64,6 +70,7 @@ function App() {
       </Center>
       <Switch>
       <Route path="/" exact>
+        <NltOpenSea />  
         <NltEditor />
       </Route>
       <Route path="/home" exact>
