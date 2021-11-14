@@ -2,7 +2,7 @@ import React, { useState, useEffect }  from 'react';
 import { Link } from 'react-router-dom';
 import { Box, Center } from '@chakra-ui/react'; 
 import { FetchData } from './FetchDataTest';
-import { NltOpenSea } from './components/NltOpenSea';
+import { FileUpload } from './components/FileUpload';
 
 
 export const Home = () => {
@@ -50,8 +50,8 @@ if (error) {
         <FetchData />
         </Center>
         <header className="Nlt-header">
-        OpenSeaTest
-        <NltOpenSea />
+        FileUploadTest
+        <FileUpload />
         </header>
         </Box>
       );

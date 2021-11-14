@@ -9,7 +9,8 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import car from '../images/skoda.png';
-import coups from '../images/coups2.jpg'
+import coups from '../images/coups2.jpg';
+import ing from '../images/ing.png'
 
 export const ContractCard = () => {
   return (
@@ -30,7 +31,7 @@ export const ContractCard = () => {
           mb={6}
           pos={'relative'}>
           <Image
-            src={car}
+            src={ing}
             layout={'fill'}
           />
         </Box>

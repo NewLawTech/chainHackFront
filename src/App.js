@@ -1,5 +1,5 @@
 import logo from './images/newlawlogo.png';
-import React from "react";
+import { useEffect } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -21,10 +21,11 @@ import { AgreementLibrary } from './screens/AgreementLibrary';
 
 function App() {
   const { 
-    Moralis, 
+    Moralis,
+    isWeb3Enabled,
+    enableWeb3,
     isAuthenticated, 
-    isAuthUndefined, 
-    user, 
+    isWeb3EnableLoading 
     } = useMoralis();
     
   const LogoutButton = () => {
@@ -42,6 +43,24 @@ function App() {
     );
   }
 
+  //  const defineNewObject = async () => {
+  //   const PrivatePerson = Moralis.Object.extend("PrivatePerson");
+  //   const person = new PrivatePerson();
+  //   person.set('firstName', 'Ale');
+  //   person.set('lastName', 'Couperus');
+  //   person.set('street', 'Kalverstraat');
+  //   person.set('houseNumber', '1');
+  //   person.set('placeOfResidence', 'Amsterdam');
+
+  //   await person.save();
+  // }
+
+  useEffect(() => {
+    if (isAuthenticated && !isWeb3Enabled) enableWeb3();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isAuthenticated, isWeb3Enabled]);
+
+
   if (!isAuthenticated) {
     return (
       <Container>
@@ -58,7 +77,8 @@ function App() {
       </Container>
       );
     }
-
+  
+  else if (isAuthenticated)
   return (
   <Router> 
      <Box display={"block"} p={35} className="App">
@@ -70,7 +90,7 @@ function App() {
       </Center>
       <Switch>
       <Route path="/" exact>
-        <NltOpenSea />  
+        {/* <NltOpenSea />   */}
         <NltEditor />
       </Route>
       <Route path="/home" exact>
