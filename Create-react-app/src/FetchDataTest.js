@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { getList } from './services/list.js';
  
 export const FetchData = () => {
   const [data, setData] = useState({ hits: [] });
+  const [list, setList] = useState([]);
  
   useEffect(() => {
     const fetchData = async () => {
@@ -15,8 +17,22 @@ export const FetchData = () => {
  
     fetchData();
   }, []);
+
+  useEffect(() => {
+    let mounted = true;
+    getList()
+      .then(items => {
+        if(mounted) {
+          setList(items)
+        }
+      })
+    return () => mounted = false;
+  }, [])
+
+
  
   return (
+    <div>
     <ul>
       {data.hits.map(item => (
         <li key={item.objectID}>
@@ -24,5 +40,12 @@ export const FetchData = () => {
         </li>
       ))}
     </ul>
+    
+    <br/>
+     <h1>My Grocery List</h1>
+     <ul>
+       {list.map(item => <li key={item.item}>{item.item}</li>)}
+     </ul>
+   </div>
   );
 }

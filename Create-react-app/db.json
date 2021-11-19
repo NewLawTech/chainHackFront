@@ -15,6 +15,14 @@
     {
       "item": "beer",
       "id": 4
+    },
+    {
+      "item": "rice",
+      "id": 5
+    },
+    {
+      "item": "Condoms",
+      "id": 6
     }
   ]
 }
