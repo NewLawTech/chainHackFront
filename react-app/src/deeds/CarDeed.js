@@ -4,7 +4,7 @@ import logo from '../images/newlawlogo.png';
 import car from '../images/skoda.png'
 
 // Create Document Component
-export const PdfDeed = () => (
+export const CarDeed = () => (
   <Document>
     <Page style={styles.body}>
     <Text style={styles.title} fixed>NewLawTech</Text>

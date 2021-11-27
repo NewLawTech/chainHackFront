@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Link } from "react-router-dom";
 import { Input, Button, Center, Stack, Heading, useColorModeValue } from '@chakra-ui/react'; 
-import { PdfDeed } from './PdfDeed';
+import { CarDeed } from '../deeds/CarDeed';
 import { PDFViewer, PDFDownloadLink } from '@react-pdf/renderer';
-import { TestDeed2 } from '../deeds/test_deed_2';
+import { TestDeed } from '../deeds/TestDeed';
 
 export const MintDeed = () => {
   const [amountOfDeeds, setAmountOfDeeds] = useState(0)
@@ -26,7 +26,7 @@ export const MintDeed = () => {
           height="600"
           showToolbar = {false}
           >
-        <PdfDeed />
+        <CarDeed />
       </PDFViewer>
       </Center>
       <br/>
@@ -46,7 +46,7 @@ export const MintDeed = () => {
             Mint Deeds
           </Button>
           <Button>
-          <PDFDownloadLink document={<TestDeed2 />} fileName="NLTest2.pdf">
+          <PDFDownloadLink document={<TestDeed />} fileName="NLTest2.pdf">
             {({ blob, url, loading, error }) =>
               loading ? 'Loading deed...' : 'Download pdf'
             }

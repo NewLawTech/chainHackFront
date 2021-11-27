@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-import { ContentState, EditorState, Modifier } from "draft-js";
+import { ContentState, EditorState } from "draft-js";
 import { Editor } from 'react-draft-wysiwyg';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import { Box, Button, Heading, useColorModeValue, Stack } from '@chakra-ui/react';

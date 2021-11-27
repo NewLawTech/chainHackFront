@@ -11,27 +11,10 @@ import {
   Link,
 } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { PDFViewer } from '@react-pdf/renderer';
-import { TestDeed2 } from '../deeds/test_deed_2';
-import { PdfDeed } from './PdfDeed';
+
 
 export const ContractCard = (props) => {
 
-  //get template in pdf for preview
-const getPdfDeed = () => {
-  return (
-  <Center>
-    <PDFViewer
-        width="800" 
-        height="600"
-        showToolbar = {false}
-        >
-      <PdfDeed />
-    </PDFViewer>
-  </Center>
-  )
-}
-  
   return (
     <Center py={6}>
       <Box
@@ -93,7 +76,6 @@ const getPdfDeed = () => {
             _focus={{
               bg: 'gray.200',
             }}
-            onClick={() => getPdfDeed({TestDeed2})}
             >
             Preview
           </Button>

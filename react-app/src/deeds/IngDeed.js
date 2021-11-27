@@ -4,7 +4,7 @@ import logo from '../images/ing.png';
 import collateral from '../images/collateral.jpg'
 
 // Create Document Component
-export const ingDeed = () => (
+export const IngDeed = () => (
   <Document>
     <Page style={styles.body}>
     <Text style={styles.title} fixed>NewLawTech</Text>
