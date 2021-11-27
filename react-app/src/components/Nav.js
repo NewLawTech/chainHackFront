@@ -83,6 +83,7 @@ export const Nav = () => {
                   </Center>
                   <br />
                   <MenuDivider />
+                  <MenuItem as={Link} to='/home'>Upload IPFS</MenuItem>
                   <MenuItem as={Link} to='/'>Editor</MenuItem>
                   <MenuItem as={Link} to='/library'>Agreements</MenuItem>
                   <MenuItem onClick={() => logout()}>Logout</MenuItem>

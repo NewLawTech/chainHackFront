@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Input, Button, Center, Stack, Heading, useColorModeValue } from '@chakra-ui/react'; 
 import { CarDeed } from '../deeds/CarDeed';
 import { PDFViewer, PDFDownloadLink } from '@react-pdf/renderer';
-import { TestDeed } from '../deeds/TestDeed';
+import { TestDeed } from '../deeds/TestDeed.js';
 
 export const MintDeed = () => {
   const [amountOfDeeds, setAmountOfDeeds] = useState(0)

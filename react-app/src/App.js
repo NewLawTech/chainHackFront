@@ -1,4 +1,5 @@
 import logo from './images/newlawlogo.png';
+import chaininkLogo from './images/chainlinkLogo.png'
 import { useEffect } from "react";
 import {
   BrowserRouter as Router,
@@ -83,7 +84,9 @@ function App() {
       <Nav />   
       <Center>
         <Heading as="h2" size="3xl" p={10}>
-          Welcome to Chainlink!
+          <div display={"block"} p={35} className="App">
+        <img width={250} height={250} src={chaininkLogo} alt="logo" />
+      </div>
         </Heading>
       </Center>
       <Switch>

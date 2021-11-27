@@ -77,7 +77,9 @@ export const ContractCard = (props) => {
               bg: 'gray.200',
             }}
             >
-            Preview
+            <Link href={props.preview} isExternal>
+              preview<ExternalLinkIcon mx="2px" />
+            </Link>
           </Button>
            <Button
             flex={1}

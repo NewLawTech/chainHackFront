@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import { Flex, Spacer, Box } from '@chakra-ui/react'; 
 import { ContractCard } from '../components/ContractCard';
 
@@ -16,13 +15,15 @@ export const AgreementLibrary = () => {
     <Flex>
       <Spacer />
       <Box p="4">
-        <ContractCard img={car} 
+        <ContractCard 
+        img={car} 
         title={"Car Sales agreement"}
         subtitle={"Buy or sell your car"}
         summary={"An easy to customize car sale contract. This sample bill of sale template is designed to make your NFT transation more legally binding."} 
         author={"Ale Couperus"}
         authorImg={coups}
         draftDate={"November 14, 2021"}
+        deed={"https://github.com/NewLawTech/chainHackFront/blob/main/react-app/src/deeds/CarDeed.js"}
         />
       </Box>
       <Spacer />
@@ -33,7 +34,9 @@ export const AgreementLibrary = () => {
         summary={"A beautifully designed co-worker agreement. This is an info-graphic that make legal clauses easy to understand for everyone"} 
         author={"Tony's lawyer"}
         authorImg={tony_lawyer}
-        draftDate={"November 22, 2021"}  
+        draftDate={"November 22, 2021"} 
+        preview={"https://ipfs.moralis.io:2053/ipfs/QmYEZNLsybsAoEEbjLuZJXZ1AdJG2CPFfZzmCoa334P5hZ"}
+        deed={"https://github.com/NewLawTech/chainHackFront/blob/main/react-app/src/deeds/TonyDeed.js"} 
         />
       </Box>
       <Spacer />
@@ -45,7 +48,7 @@ export const AgreementLibrary = () => {
         author={"ING's lawyer"}
         authorImg={ing_lawyer}
         draftDate={"October 5, 2021"}
-        deed={"https://github.com/NewLawTech/chainHackFront/blob/main/Create-react-app/src/deeds/test_deed.js"}
+        deed={"https://github.com/NewLawTech/chainHackFront/blob/main/react-app/src/deeds/IngDeed.js"}
         />
       </Box>
       <Spacer />
