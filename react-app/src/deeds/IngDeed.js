@@ -19,38 +19,37 @@ export const IngDeed = () => (
         Pledge agreement
       </Text>
       <Text style={styles.text}>
-        Artikel 1:  De gezekerde schulden
+      Right of Pledge and Covenant to Pledge
 
-        De in deze akte opgenomen verpanding geschiedt tot meerdere zekerheid voor 
-        de betaling van de vorderingen van Financier op Kredietnemer die voortvloeien 
-        uit de op 1 November 2021 gedateerde overeenkomst, op basis waarvan een 
-        geldsom is verschuldigd in hoofdsom groot EUR 10.000,-, te vermeerderen met 
-        renten en kosten tot een maximum van 1/3 deel van de oorspronkelijke hoofdsom, 
-        hierna te noemen de “Gezekerde Schulden”. 
+      2.1	The Pledgors hereby agree to create in favour of the Pledgee the 
+      right of pledge referred to in this Article 2. The Pledgee hereby 
+      agrees to accept such right of pledge. 
 
-        Op grond van deze overeenkomst is Kredietnemer jegens Financier verplicht de 
-        in deze akte genoemde zekerheden aan Financier te verschaffen. Partijen bevestigen 
-        hierbij het bestaan van deze verplichting. 
+      2.2	In order to secure to the Pledgee the prompt fulfilment of the 
+      Secured Obligations, the Pledgors hereby pledge the Assets, now, or 
+      as the case may be, in advance (bij voorbaat) to the Pledgee, which 
+      right of pledge the Pledgee hereby accepts.
+
+      2.3	The creation of the right of pledge in respect of the Assets shall 
+      be completed by the Registration of this Deed of Pledge.
+
+      2.4	The Pledgors undertake at their expense to cause the Registration 
+      of this Deed of Pledge to be effected as soon as possible after its 
+      execution by the Parties. The Pledgors shall provide the Pledgee without 
+      delay with a copy of the registered Deed of Pledge. The Pledgee is also 
+      authorised at any time to effect the Registration of this Deed of Pledge.
+
+      2.5	The Assets at any time pledged by this Deed of Pledge shall include 
+      the Assets specified in Schedule 1 or in any Asset List and shall otherwise 
+      be determined by the terms of this Deed of Pledge, the intentions of the 
+      Pledgors and the Pledgee, the books and records of the Pledgee and such 
+      other factors as the law permits.
       </Text>
-      
       <Text style={styles.text}>
-        Artikel 2: Verpanding
-
-        2.1	Pandgever verpandt aan Financier, die deze verpanding aanvaardt, 
-        hierbij alle tot het bedrijf van de Pandgever behorende goederen waaronder 
-        begrepen, maar niet beperkt tot de Bedrijfsuitrusting, Voorraden en Vorderingen;
-
-      </Text>
-      <Text style={styles.text}>
-        Artikel 8: Diversen
-        
-        8.8	Wanneer Financier, na mededeling aan de schuldenaar, overweegt met de 
-        schuldenaar een minnelijk of gerechtelijk akkoord te sluiten, deelt zij dat 
-        mee aan Pandgever. Pandgever kan het sluiten van het akkoord voorkomen door het 
-        bedrag van de betreffende verpande vordering aan Financier te betalen. 
+      Signed by Chainlink and NewLawTech on 28 November 2021 
       </Text>
       <Text style={styles.subtitle} break>
-        Annex I: Verpand object
+        Annex I: Pledged object
       </Text>
       <Image
         style={styles.image}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Spacer, Box } from '@chakra-ui/react'; 
+import { Flex, Spacer, Box, Button, Stack } from '@chakra-ui/react'; 
 import { ContractCard } from '../components/ContractCard';
 
 import coups from '../images/coups2.jpg';
@@ -52,7 +52,7 @@ export const AgreementLibrary = () => {
         />
       </Box>
       <Spacer />
-    </Flex>
+    </Flex>   
   )
 }
 

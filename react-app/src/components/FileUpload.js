@@ -1,11 +1,11 @@
 import React, { Fragment, useState } from 'react';
 import { useMoralisFile, useNewMoralisObject } from "react-moralis";
-import { Input, Textarea } from "@chakra-ui/react";
+import { Button, Input, Textarea } from "@chakra-ui/react";
 
 
 export const FileUpload = () => {
   const [file, setFile] = useState();
-  const [filename, setFilename] = useState('Choose File');
+  const [filename, setFilename] = useState('Please select the file to be uploaded');
   // const [name, setName] = useState();
   const [uploadedFile, setUploadedFile] = useState({});
 
@@ -59,18 +59,22 @@ export const FileUpload = () => {
     <Fragment>
       <form onSubmit={onSubmit}>
         <div className='custom-file'>
-          <Input type="Text" name="metadataName" id="metadataName" placeholder="name" /><br/><br/>
-          <Textarea name="metadataDescription" id="metadataDescription" cols="30" rows="10"></Textarea><br/>
+          <Input type="Text" name="metadataName" id="metadataName" placeholder="File name" /><br/><br/>
+          <Textarea name="metadataDescription" id="metadataDescription" cols="20" rows="10" placeholder="Description"></Textarea>
+          <br/>
+          <br/>
           <Input type='file' name='fileinput' id='customFile' onChange=
           {onChange} />
           <label className='custom-file-label' htmlFor='CustomFile'>
             {filename}
           </label>
         </div>
+        <Button>
         <Input 
           type="submit" 
           value="Upload" 
           />
+          </Button>
       </form>
     </Fragment>
   )

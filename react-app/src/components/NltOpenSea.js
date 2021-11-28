@@ -52,7 +52,11 @@ const [nftData, setNftData] =useState([])
 		setNftData(res);
 	};
 
-	const content = isLoading ? <div>Loading...</div> : <div><pre>{JSON.stringify(nftData, null, 2)}</pre></div>
+	const NftDataRederer = nftData.map(data => {
+		return <div>{data.name}</div>
+	})
+
+	const content = isLoading ? <div>Placeholder NFT metadata...</div> : <div><pre>{NftDataRederer}</pre></div>
 
 return (
 		<>
@@ -81,7 +85,7 @@ return (
 			<Stack direction="row" spacing={4} sx={{ margin: 3 }}>
 				<Button onClick={getAsset}>Get Asset</Button>
 			</Stack>
-			<Heading>{content}</Heading> 
+			<Heading as="h5" size="sm">{content}</Heading> 
 		</>
 	);
 }

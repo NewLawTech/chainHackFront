@@ -6,12 +6,12 @@ import {
   Image,
   Text,
   Stack,
+  VStack,
   Avatar,
   useColorModeValue,
   Link,
 } from '@chakra-ui/react';
-import { ExternalLinkIcon } from '@chakra-ui/icons'
-
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 
 export const ContractCard = (props) => {
 
@@ -69,18 +69,6 @@ export const ContractCard = (props) => {
           </Stack>
         </Stack>
         <Stack mt={8} direction={'row'} spacing={4}>
-          <Button
-            flex={1}
-            fontSize={'sm'}
-            rounded={'full'}
-            _focus={{
-              bg: 'gray.200',
-            }}
-            >
-            <Link href={props.preview} isExternal>
-              preview<ExternalLinkIcon mx="2px" />
-            </Link>
-          </Button>
            <Button
             flex={1}
             fontSize={'sm'}
@@ -100,7 +88,42 @@ export const ContractCard = (props) => {
               Template<ExternalLinkIcon mx="2px" />
             </Link>
           </Button>
+          <Button
+            flex={1}
+            fontSize={'sm'}
+            rounded={'full'}
+            _focus={{
+              bg: 'gray.200',
+            }}
+            >
+            <Link href={props.preview} isExternal>
+              Preview
+            </Link>
+          </Button>
         </Stack>
+        <br/>
+        <VStack
+        spacing={8}
+        align="stretch"
+        >
+        <Button
+          flex={1}
+            fontSize={'sm'}
+            rounded={'full'}
+            bg={'blue.400'}
+            color={'white'}
+            boxShadow={
+              '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
+            }
+            _hover={{
+              bg: 'blue.500',
+            }}
+            _focus={{
+              bg: 'blue.500',
+            }}>
+            <Link to="/">Prefill</Link>   
+          </Button>
+        </VStack>
       </Box>
     </Center>
   );
