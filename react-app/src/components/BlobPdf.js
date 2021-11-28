@@ -1,4 +1,4 @@
 import { pdf } from '@react-pdf/renderer';
-import { PdfDeed } from './PdfDeed';
+import { TestDeed } from '../deeds/TestDeed';
 
-export const blob = pdf(PdfDeed).toBlob();
+export const blob = pdf(TestDeed).toBlob();

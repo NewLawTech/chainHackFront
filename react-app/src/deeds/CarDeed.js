@@ -19,60 +19,41 @@ export const CarDeed = () => (
         Pledge agreement
       </Text>
       <Text style={styles.text}>
-        En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha
-        mucho tiempo que vivía un hidalgo de los de lanza en astillero, adarga
-        antigua, rocín flaco y galgo corredor. Una olla de algo más vaca que
-        carnero, salpicón las más noches, duelos y quebrantos los sábados,
-        lentejas los viernes, algún palomino de añadidura los domingos,
-        consumían las tres partes de su hacienda. El resto della concluían sayo
-        de velarte, calzas de velludo para las fiestas con sus pantuflos de lo
-        mismo, los días de entre semana se honraba con su vellori de lo más
-        fino. Tenía en su casa una ama que pasaba de los cuarenta, y una sobrina
-        que no llegaba a los veinte, y un mozo de campo y plaza, que así
-        ensillaba el rocín como tomaba la podadera. Frisaba la edad de nuestro
-        hidalgo con los cincuenta años, era de complexión recia, seco de carnes,
-        enjuto de rostro; gran madrugador y amigo de la caza. Quieren decir que
-        tenía el sobrenombre de Quijada o Quesada (que en esto hay alguna
-        diferencia en los autores que deste caso escriben), aunque por
-        conjeturas verosímiles se deja entender que se llama Quijana; pero esto
-        importa poco a nuestro cuento; basta que en la narración dél no se salga
-        un punto de la verdad
+      Right of Pledge and Covenant to Pledge
+
+      2.1	The Pledgors hereby agree to create in favour of the Pledgee the 
+      right of pledge referred to in this Article 2. The Pledgee hereby 
+      agrees to accept such right of pledge. 
+
+      2.2	In order to secure to the Pledgee the prompt fulfilment of the 
+      Secured Obligations, the Pledgors hereby pledge the Assets, now, or 
+      as the case may be, in advance (bij voorbaat) to the Pledgee, which 
+      right of pledge the Pledgee hereby accepts.
+
+      2.3	The creation of the right of pledge in respect of the Assets shall 
+      be completed by the Registration of this Deed of Pledge.
+
+      2.4	The Pledgors undertake at their expense to cause the Registration 
+      of this Deed of Pledge to be effected as soon as possible after its 
+      execution by the Parties. The Pledgors shall provide the Pledgee without 
+      delay with a copy of the registered Deed of Pledge. The Pledgee is also 
+      authorised at any time to effect the Registration of this Deed of Pledge.
+
+      2.5	The Assets at any time pledged by this Deed of Pledge shall include 
+      the Assets specified in Schedule 1 or in any Asset List and shall otherwise 
+      be determined by the terms of this Deed of Pledge, the intentions of the 
+      Pledgors and the Pledgee, the books and records of the Pledgee and such 
+      other factors as the law permits.
       </Text>
       
       <Text style={styles.text}>
-        Con estas y semejantes razones perdía el pobre caballero el juicio, y
-        desvelábase por entenderlas, y desentrañarles el sentido, que no se lo
-        sacara, ni las entendiera el mismo Aristóteles, si resucitara para sólo
-        ello. No estaba muy bien con las heridas que don Belianis daba y
-        recibía, porque se imaginaba que por grandes maestros que le hubiesen
-        curado, no dejaría de tener el rostro y todo el cuerpo lleno de
-        cicatrices y señales; pero con todo alababa en su autor aquel acabar su
-        libro con la promesa de aquella inacabable aventura, y muchas veces le
-        vino deseo de tomar la pluma, y darle fin al pie de la letra como allí
-        se promete; y sin duda alguna lo hiciera, y aun saliera con ello, si
-        otros mayores y continuos pensamientos no se lo estorbaran. Tuvo muchas
-        veces competencia con el cura de su lugar (que era hombre docto graduado
-        en Sigüenza), sobre cuál había sido mejor caballero, Palmerín de
-        Inglaterra o Amadís de Gaula; mas maese Nicolás, barbero del mismo
-        pueblo, decía que ninguno llegaba al caballero del Febo, y que si alguno
-        se le podía comparar, era don Galaor, hermano de Amadís de Gaula, porque
-        tenía muy acomodada condición para todo; que no era caballero
-        melindroso, ni tan llorón como su hermano, y que en lo de la valentía no
-        le iba en zaga.
+      Signed by Chainlink and NewLawTech on 28 November 2021
       </Text>
       <Text style={styles.text}>
-        En resolución, él se enfrascó tanto en su lectura, que se le pasaban las
-        noches leyendo de claro en claro, y los días de turbio en turbio, y así,
-        del poco dormir y del mucho leer, se le secó el cerebro, de manera que
-        vino a perder el juicio. Llenósele la fantasía de todo aquello que leía
-        en los libros, así de encantamientos, como de pendencias, batallas,
-        desafíos, heridas, requiebros, amores, tormentas y disparates
-        imposibles, y asentósele de tal modo en la imaginación que era verdad
-        toda aquella máquina de aquellas soñadas invenciones que leía, que para
-        él no había otra historia más cierta en el mundo.
+        Specific clauses drafted by legal designer;-)
       </Text>
       <Text style={styles.subtitle} break>
-        Annex I: car
+        Annex I: Pledged object
       </Text>
       <Image
         style={styles.image}
